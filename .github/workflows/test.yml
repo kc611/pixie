@@ -25,10 +25,9 @@ jobs:
           miniconda-version: "latest"
           auto-update-conda: true
           auto-activate-base: false
-      - name: Install dependencies
-        shell: bash -l {0}
-        run: |
-          conda install python=3.11 pytest coverage numpy numba
+      - name: Create test environment
+          conda create -n test-environment python=3.11 pytest coverage numpy numba
+          conda activate test-environment
       - name : Display packages
         run: |
           python -m numba -s
