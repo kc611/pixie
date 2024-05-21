@@ -28,12 +28,10 @@ jobs:
       - name: Install dependencies
         shell: bash -l {0}
         run: |
-          conda install python=3.11 pytest coverage
-          pip install numpy
+          conda install python=3.11 pytest coverage numpy numba
       - name : Display packages
         run: |
-          conda list
-          pip list
+          numba -s
       - name: Install numba-pixie with pip
         shell: bash -l {0}
         run: |
