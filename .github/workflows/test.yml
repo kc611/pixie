@@ -21,6 +21,7 @@ jobs:
           fetch-depth: 0
       - name: Setup Miniconda
         uses: conda-incubator/setup-miniconda@v2
+        miniconda-version: "latest"
         with:
           auto-update-conda: true
           auto-activate-base: false
